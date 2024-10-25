@@ -7,7 +7,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.attribute.BasicFileAttributes;
 
-public class ListCommand implements Command {
+public class ListCommand implements Command { 
     public void execute(String[] args) {
         boolean listAll = false;
         boolean listRecursively = false;
