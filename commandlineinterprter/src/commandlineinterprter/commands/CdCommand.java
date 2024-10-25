@@ -48,35 +48,3 @@ public class CdCommand implements Command {
         }
     }
 }
-
-
-//public void cd(String args,String adress) {
-//    if (args.equalsIgnoreCase("~")) {
-//        Main.currentDirectory = Main.homeDirectory;
-//    }
-//    else if(args.equalsIgnoreCase("-")) {
-//        try {
-//            int lastSlash = adress.lastIndexOf("\\");
-//            String adressParent = adress.substring(0, lastSlash);
-//            Main.currentDirectory = adressParent;
-//        }catch(Exception e) {
-//            System.out.print("you are actually at the root");
-//        }
-//    }
-//    else if (args.equalsIgnoreCase("/")) {
-//        try {
-//            int lastSlash = adress.indexOf("\\");
-//            String root = adress.substring(0,lastSlash);
-//            Main.currentDirectory = root;
-//        }
-//        catch(Exception e) {
-//            System.out.print("you are at the root");
-//        }
-//    }
-//    else if(args.equalsIgnoreCase("~")) {
-//        Main.currentDirectory = Main.homeDirectory;
-//    }
-//    else {
-//        System.out.println("cd command can take one of these arguments only -,/,,~");
-//    }
-//}
