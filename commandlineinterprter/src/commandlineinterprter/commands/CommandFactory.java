@@ -19,6 +19,10 @@ public class CommandFactory {
                 return new ExitCommand();
             case "help":
                 return new HelpCommand();
+            case "ls":
+                return new ListCommand();
+            case "mkdir":
+                return new MkdirCommand();
             // Add cases for other commands here
             default:
                 return null;
