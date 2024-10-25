@@ -12,7 +12,7 @@ public class RedirectCommand implements Command {
             return;
         }
 
-        String commandOutput = args[1];
+        String commandOutput = args[0];
         String filename = args[2];
 
         try (FileWriter writer = new FileWriter(filename, false)) {
