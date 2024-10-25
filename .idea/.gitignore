@@ -8,5 +8,4 @@
 /dataSources.local.xml
 
 # Binary Files
-/bin/
-/out/
+*.class
