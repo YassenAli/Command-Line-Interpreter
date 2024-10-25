@@ -1,7 +1,7 @@
 # Command Line Interpreter (CLI)
 
 ## Project Overview
-This project implements a basic Command Line Interpreter (CLI), similar to a Unix/Linux shell, in Java. The CLI supports various system and internal commands and includes comprehensive unit testing using JUnit. 
+This project implements a basic Command Line Interpreter (CLI), similar to a Unix/Linux shell, in Java. The CLI supports various system and internal commands and includes comprehensive unit testing using JUnit.
 
 ### Command List & Usage
 
