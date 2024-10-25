@@ -1,2 +1,11 @@
-/out/
-/bin/
+# Ignore compiled Java class files
+*.class
+
+# Ignore logs directory
+/logs/
+
+# Ignore temporary files
+/temp/
+
+# Ignore build directories
+/build/
