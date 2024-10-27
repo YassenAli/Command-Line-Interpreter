@@ -30,6 +30,8 @@ public class CommandFactory {
                 return  new RemoveCommand();
             case "rmdir" :
                 return new RemoveDirectoryCommand();
+            case "mv" :
+                return new MoveCommand();
             default:
                 return null;
         }
