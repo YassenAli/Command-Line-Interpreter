@@ -37,7 +37,6 @@ public class RedirectCommand implements Command {
                 processBuilder = new ProcessBuilder(commandArgs);
             }
 
-            // Start the process and get the output
             Process process = processBuilder.start();
 
             // Read the output from the command

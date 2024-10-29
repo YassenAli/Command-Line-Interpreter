@@ -1,66 +1,45 @@
 package org.os.commands;
 
 import java.io.*;
+import java.util.Arrays;
 
 public class PipeCommand implements Command {
     @Override
     public void execute(String[] args) {
-        if (args.length < 2) {
-            System.out.println("Usage: command1 | command2");
-            return;
-        }
+        // Split the commands by pipe symbol
+        String[] commands = args[0].split("\\|");
+        String input = null;
 
-        // Split commands into two parts
-        String[] command1 = args[0].trim().split("\\s+");
-        String[] command2 = args[1].trim().split("\\s+");
+        for (String commandStr : commands) {
+            // Trim whitespace and split the command and its arguments
+            String commandPart = commandStr.trim();
+            String[] commandArgs = commandPart.split("\\s+");
 
-        // Adjust command names for Windows if needed
-        if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            if (command1[0].equals("ls")) {
-                command1[0] = "cmd.exe";
-                command1 = new String[]{"cmd.exe", "/c", "dir"};
-            }
-            if (command2[0].equals("grep")) {
-                command2[0] = "findstr";
-            }
-        }
+            // Get the command from the CommandFactory
+            Command command = CommandFactory.getCommand(commandArgs[0]);
 
-        try {
-            // Set up ProcessBuilder for the first command
-            ProcessBuilder processBuilder1 = new ProcessBuilder(command1);
-            Process process1 = processBuilder1.start();
+            if (command != null) {
+                // Capture the output of the command
+                ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+                PrintStream originalOut = System.out;
+                System.setOut(new PrintStream(outputStream));
 
-            // Set up ProcessBuilder for the second command
-            ProcessBuilder processBuilder2 = new ProcessBuilder(command2);
-            Process process2 = processBuilder2.start();
+                // Execute the command
+                command.execute(Arrays.copyOfRange(commandArgs, 1, commandArgs.length));
 
-            // Pipe output from process1 to process2
-            try (BufferedReader reader = new BufferedReader(new InputStreamReader(process1.getInputStream()));
-                 BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(process2.getOutputStream()))) {
+                // Restore the original output
+                System.setOut(originalOut);
 
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    writer.write(line);
-                    writer.newLine();
-                    writer.flush(); // Ensure each line is sent immediately
-                }
-            }
-
-            // Wait for both processes to complete
-            int exitCode1 = process1.waitFor();
-            int exitCode2 = process2.waitFor();
-
-            // Output exit statuses or errors for each process
-            if (exitCode1 == 0 && exitCode2 == 0) {
-                System.out.println("Piping executed successfully.");
+                // Get the output and prepare it as input for the next command
+                input = outputStream.toString().trim();
             } else {
-                System.err.println("Error: First command exited with code " + exitCode1);
-                System.err.println("Error: Second command exited with code " + exitCode2);
+                System.out.println("Invalid command in pipe: " + commandArgs[0]);
+                return; // Exit on invalid command
             }
-
-        } catch (IOException | InterruptedException e) {
-            System.err.println("Error during pipe execution: " + e.getMessage());
         }
+
+        // Output the final result of the piped commands
+        System.out.println(input);
     }
 }
 
