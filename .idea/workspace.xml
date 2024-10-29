@@ -17,9 +17,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2o7Ar21jEXeSsuqpKHwO73NolZq" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -37,7 +37,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/Semester 5/Operating Systems/Assignments/Assignment 1/CLI/src/main/java/org/os",
+    "last_opened_file_path": "E:/Semester 5/Operating Systems/Assignments/Assignment 1/CLI/src/test/java",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -55,7 +55,7 @@
       <recent name="E:\Semester 5\Operating Systems\Assignments\Assignment 1\CLI\src\main\java\org\os" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.All in CLI">
     <configuration name="All in CLI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
       <option name="PACKAGE_NAME" value="" />
@@ -76,8 +76,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MkdirCommandTest.testExecuteCreatesDirectory" />
         <item itemvalue="JUnit.All in CLI" />
+        <item itemvalue="JUnit.MkdirCommandTest.testExecuteCreatesDirectory" />
       </list>
     </recent_temporary>
   </component>
@@ -98,6 +98,7 @@
       <option name="presentableId" value="Default" />
       <updated>1730210435919</updated>
       <workItem from="1730210436877" duration="1913000" />
+      <workItem from="1730212556599" duration="321000" />
     </task>
     <servers />
   </component>
