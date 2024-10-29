@@ -24,6 +24,14 @@ public class CommandFactory {
             case "mkdir":
                 return new MkdirCommand();
             // Add cases for other commands here
+            case "touch":
+                return new TouchCommand();
+            case "rm" :
+                return  new RemoveCommand();
+            case "rmdir" :
+                return new RemoveDirectoryCommand();
+            case "mv" :
+                return new MoveCommand();
             default:
                 return null;
         }
