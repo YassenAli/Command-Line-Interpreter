@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="528441ef-bc7b-4310-8a47-9af4a45d9eec" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/os/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/AppendCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AppendCommandTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,41 +72,12 @@
       <recent name="E:\Semester 5\Operating Systems\Assignments\Assignment 1\CLI\src\main\java\org\os" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AppendCommandTest">
+  <component name="RunManager" selected="JUnit.RedirectCommandTest">
     <configuration name="AppendCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AppendCommandTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppendCommandTest.testAppendCommand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CLI" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AppendCommandTest" />
-      <option name="METHOD_NAME" value="testAppendCommand" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CatCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CLI" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CatCommandTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CatCommandTest.testCatCommand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CLI" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CatCommandTest" />
-      <option name="METHOD_NAME" value="testCatCommand" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -122,13 +91,43 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RedirectCommandTest.testRedirectCommand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RedirectCommandTest" />
+      <option name="METHOD_NAME" value="testRedirectCommand" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedirectCommandTest.testRedirectCommand_InvalidFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RedirectCommandTest" />
+      <option name="METHOD_NAME" value="testRedirectCommand_InvalidFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedirectCommandTest.testRedirectCommand_Overwrite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RedirectCommandTest" />
+      <option name="METHOD_NAME" value="testRedirectCommand_Overwrite" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AppendCommandTest" />
-        <item itemvalue="JUnit.AppendCommandTest.testAppendCommand" />
-        <item itemvalue="JUnit.CatCommandTest" />
         <item itemvalue="JUnit.RedirectCommandTest" />
-        <item itemvalue="JUnit.CatCommandTest.testCatCommand" />
+        <item itemvalue="JUnit.RedirectCommandTest.testRedirectCommand_InvalidFile" />
+        <item itemvalue="JUnit.RedirectCommandTest.testRedirectCommand_Overwrite" />
+        <item itemvalue="JUnit.RedirectCommandTest.testRedirectCommand" />
+        <item itemvalue="JUnit.AppendCommandTest" />
       </list>
     </recent_temporary>
   </component>
@@ -145,7 +144,7 @@
       <workItem from="1730213226002" duration="105000" />
       <workItem from="1730213532548" duration="16000" />
       <workItem from="1730227128069" duration="82000" />
-      <workItem from="1730228140546" duration="3049000" />
+      <workItem from="1730228140546" duration="4020000" />
     </task>
     <servers />
   </component>

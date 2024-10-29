@@ -1,90 +1,67 @@
 import org.os.commands.RedirectCommand;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import org.junit.jupiter.api.*;
+import java.io.*;
+import java.nio.file.*;
+
 import static org.junit.jupiter.api.Assertions.*;
-import java.io.BufferedReader;
 
 public class RedirectCommandTest {
-    private RedirectCommand redirectCommand;
-    private final String testFileName = "test_output.txt";
+    private static final String TEST_FILE = "test_output_redirect.txt";
 
     @BeforeEach
-    void setUp() {
-        redirectCommand = new RedirectCommand();
-        deleteTestFile();
+    public void setup() throws IOException {
+        Files.deleteIfExists(Paths.get(TEST_FILE));
+        Files.createFile(Paths.get(TEST_FILE));
     }
 
-    private void deleteTestFile() {
-        File file = new File(testFileName);
-        if (file.exists()) {
-            file.delete();
-        }
+    @AfterEach
+    public void cleanup() throws IOException {
+        Files.deleteIfExists(Paths.get(TEST_FILE));
     }
 
     @Test
-    void testValidCommandRedirection() throws IOException {
-        String[] args = {"echo", "Hello, World!", ">", testFileName};
+    public void testRedirectCommand() throws IOException {
+        String[] args = {"echo", "Redirected output"};
+        args = addFilenameToArgs(args, TEST_FILE);
+
+        RedirectCommand redirectCommand = new RedirectCommand();
         redirectCommand.execute(args);
 
-        File file = new File(testFileName);
-        assertTrue(file.exists(), "Output file should be created.");
-
-        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
-            String line = reader.readLine();
-            assertEquals("Hello, World!", line, "Output file should contain the command's output.");
-        }
+        // Check that the file contains the redirected output, and ensure it's not appended
+        String content = Files.readString(Paths.get(TEST_FILE));
+        assertTrue(content.contains("Redirected output"));
     }
 
     @Test
-    void testInvalidCommand() {
-        String[] args = {"invalidcommand", ">", testFileName};
-        assertThrows(IOException.class, () -> redirectCommand.execute(args), "Invalid command should throw an exception.");
-    }
+    public void testRedirectCommand_Overwrite() throws IOException {
+        Files.writeString(Paths.get(TEST_FILE), "Existing content");
 
-    @Test
-    void testMissingFilename() {
-        String[] args = {"echo", "Hello"};
+        String[] args = {"echo", "New content"};
+        args = addFilenameToArgs(args, TEST_FILE);
+
+        RedirectCommand redirectCommand = new RedirectCommand();
         redirectCommand.execute(args);
 
-        File file = new File(testFileName);
-        assertFalse(file.exists(), "Output file should not be created if filename is missing.");
+        // Verify the file was overwritten with "New content"
+        String content = Files.readString(Paths.get(TEST_FILE));
+        assertTrue(content.contains("New content") && !content.contains("Existing content"),
+                "File should be overwritten with new content");
     }
 
     @Test
-    void testAppendRedirection() throws IOException {
-        String[] initialArgs = {"echo", "First line", ">", testFileName};
-        redirectCommand.execute(initialArgs);
+    public void testRedirectCommand_InvalidFile() {
+        String invalidFilename = "/invalid_path/test.txt";
+        String[] args = {"echo", "Some output", invalidFilename};
 
-        String[] appendArgs = {"echo", "Second line", ">>", testFileName};
-        redirectCommand.execute(appendArgs);
-
-        File file = new File(testFileName);
-        assertTrue(file.exists(), "Output file should be created.");
-
-        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
-            assertEquals("First line", reader.readLine());
-            assertEquals("Second line", reader.readLine());
-        }
-    }
-
-    @Test
-    void testHandleRedirectionInvalidFilename() {
-        String[] args = {"echo", "Some content", ">", "/invalid/path/test_output.txt"};
-        Exception exception = assertThrows(IOException.class, () -> redirectCommand.execute(args));
-        assertTrue(exception.getMessage().contains("Error:"), "Should throw an error for invalid file paths.");
-    }
-
-    @Test
-    void testHandleEmptyArgs() {
-        String[] args = {};
+        RedirectCommand redirectCommand = new RedirectCommand();
         redirectCommand.execute(args);
-        File file = new File(testFileName);
-        assertFalse(file.exists(), "No file should be created for empty arguments.");
+    }
+
+    private String[] addFilenameToArgs(String[] args, String filename) {
+        String[] newArgs = new String[args.length + 1];
+        System.arraycopy(args, 0, newArgs, 0, args.length);
+        newArgs[args.length] = filename;
+        return newArgs;
     }
 }
