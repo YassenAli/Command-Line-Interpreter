@@ -67,18 +67,6 @@ public class Main {
             System.out.println("Invalid redirection command.");
         }
     }
-//    private static void handleRedirection(String input) {
-//        String[] splitInput = input.split("\\s+");
-//        String commandOutput = splitInput[0];
-//        boolean append = input.contains(">>");
-//        Command command = append ? CommandFactory.getCommand(">>") : CommandFactory.getCommand(">");
-//
-//        if (command != null) {
-//            command.execute(Arrays.copyOfRange(splitInput, 1, splitInput.length));
-//        } else {
-//            System.out.println("Invalid redirection command.");
-//        }
-//    }
 
     private static void handlePipe(String input) {
         String[] pipeParts = input.split("\\|");
