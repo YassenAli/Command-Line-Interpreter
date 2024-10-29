@@ -23,10 +23,8 @@ class AppendCommandTest {
     public void testAppendCommand() throws IOException {
         String input = "echo Test output >> " + TEST_FILE;
 
-        // Handle redirection in Main class and execute AppendCommand
         Main.handleRedirection(input);
 
-        // Verify output was appended
         String content = Files.readString(Paths.get(TEST_FILE));
         assertTrue(content.contains("Test output"));
     }
@@ -45,9 +43,7 @@ class AppendCommandTest {
     @Test
     public void testAppendCommandInvalidArgs() {
         AppendCommand appendCommand = new AppendCommand();
-        appendCommand.execute(new String[]{"echo"}); // No filename
-
-        // Verify it outputs usage instructions or error handling
+        appendCommand.execute(new String[]{"echo"});
     }
 
     @Test
@@ -55,9 +51,6 @@ class AppendCommandTest {
         String invalidFile = "/invalid/test.txt";
         String input = "echo Error check >> " + invalidFile;
 
-        // Redirect to invalid file path
         Main.handleRedirection(input);
-
-        // Optionally verify error message output (e.g., using logs or error stream capturing)
     }
 }
