@@ -5,48 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="528441ef-bc7b-4310-8a47-9af4a45d9eec" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/AppendCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/CatCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ListCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/MkdirCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/PipeCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/RedirectCommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assignments.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/AppendCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/CatCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/CatCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/CdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/CdCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/CommandFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/ExitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/ExitCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/HelpCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/ListCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/ListCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/MkdirCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/MkdirCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/MoveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/MoveCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/PipeCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/PwdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/PwdCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/RedirectCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/RemoveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/RemoveCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/RemoveDirectoryCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/RemoveDirectoryCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/TouchCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/TouchCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/test/java/org/cmd/commands/MoveCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MoveCommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/test/java/org/cmd/commands/RemoveCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RemoveCommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/test/java/org/cmd/commands/RemoveDirectoryCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RemoveDirectoryCommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/test/java/org/cmd/commands/TouchCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TouchCommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/os/commands/AppendCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/AppendCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/os/commands/PipeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/PipeCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/os/commands/RedirectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/RedirectCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +15,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -63,6 +23,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "mariemomar"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/YassenAli/OS-Assignment-1.git",
+    "accountId": "d4001a21-2be8-41fa-80af-bfefd41a1dd4"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -70,6 +42,9 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2o7Ar21jEXeSsuqpKHwO73NolZq" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -80,13 +55,21 @@
     "Application.Main.executor": "Run",
     "JUnit.All in CLI.executor": "Run",
     "JUnit.CatCommandTest.executor": "Run",
+    "JUnit.ExitCommandTest.executor": "Run",
+    "JUnit.HelpCommandTest.executor": "Run",
     "JUnit.ListCommandTest.executor": "Run",
     "JUnit.MkdirCommandTest.executor": "Run",
     "JUnit.MkdirCommandTest.testExecuteCreatesDirectory.executor": "Run",
+    "JUnit.MoveCommandTest.executor": "Run",
+    "JUnit.RemoveCommandTest.executor": "Run",
+    "JUnit.RemoveDirectoryCommandTest.executor": "Run",
+    "JUnit.TouchCommandTest.executor": "Run",
     "JUnit.java in CLI.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging Yassin",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "Y:/FCAI/Level 3/Operating System/Assignments/OS-Assignment-1",
@@ -106,49 +89,66 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Semester 5\Operating Systems\Assignments\Assignment 1\CLI\src\main\java\org\os" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.os.commands" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.java in CLI">
-    <configuration name="All in CLI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.PwdCommandTest">
+    <configuration name="ExitCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MkdirCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CLI" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MkdirCommandTest" />
+      <option name="MAIN_CLASS_NAME" value="ExitCommandTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MkdirCommandTest.testExecuteCreatesDirectory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HelpCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MkdirCommandTest" />
-      <option name="METHOD_NAME" value="testExecuteCreatesDirectory" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="HelpCommandTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="java in CLI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MoveCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MoveCommandTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PwdCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PwdCommandTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RemoveCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RemoveCommandTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.java in CLI" />
-        <item itemvalue="JUnit.MkdirCommandTest" />
-        <item itemvalue="JUnit.All in CLI" />
-        <item itemvalue="JUnit.MkdirCommandTest.testExecuteCreatesDirectory" />
+        <item itemvalue="JUnit.PwdCommandTest" />
+        <item itemvalue="JUnit.HelpCommandTest" />
+        <item itemvalue="JUnit.ExitCommandTest" />
+        <item itemvalue="JUnit.MoveCommandTest" />
+        <item itemvalue="JUnit.RemoveCommandTest" />
       </list>
     </recent_temporary>
   </component>
@@ -171,5 +171,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
