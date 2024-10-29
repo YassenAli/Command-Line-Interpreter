@@ -14,7 +14,7 @@ public class MkdirCommand implements Command {
             return;
         }
 
-        String directoryName = String.join(" ",args);
+        String directoryName = args[0];
         Path path = Paths.get(directoryName);
 
         // Check if the parent directory exists
