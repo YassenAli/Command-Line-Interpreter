@@ -3,7 +3,9 @@ package org.os;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
-import org.os.commands.*;
+
+import org.os.commands.Command;
+import org.os.commands.CommandFactory;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -19,8 +21,10 @@ public class Main {
             System.out.print(currentDirectory + ":-$ ");
             String input = scanner.nextLine().trim();
 
-            if (input.isEmpty()) continue;
-            if (input.equals("exit")) break;
+            if (input.isEmpty())
+                continue;
+            if (input.equals("exit"))
+                break;
 
             String[] splitInput = input.split("\\s+");
             String commandName = splitInput[0];
@@ -43,7 +47,7 @@ public class Main {
         }
     }
 
-    private static void handleRedirection(String input) {
+    public static void handleRedirection(String input) {
         String[] splitInput = input.split("\\s+");
         boolean append = input.contains(">>");
 

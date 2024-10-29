@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="528441ef-bc7b-4310-8a47-9af4a45d9eec" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RedirectCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RedirectCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/os/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AppendCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AppendCommandTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +40,7 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "JUnit.All in CLI.executor": "Run",
+    "JUnit.AppendCommandTest.executor": "Run",
     "JUnit.AppendCommandTest.testAppendCommand.executor": "Run",
     "JUnit.CatCommandTest.executor": "Run",
     "JUnit.CatCommandTest.testCatCommand.executor": "Run",
@@ -123,10 +125,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.AppendCommandTest" />
+        <item itemvalue="JUnit.AppendCommandTest.testAppendCommand" />
         <item itemvalue="JUnit.CatCommandTest" />
         <item itemvalue="JUnit.RedirectCommandTest" />
         <item itemvalue="JUnit.CatCommandTest.testCatCommand" />
-        <item itemvalue="JUnit.AppendCommandTest.testAppendCommand" />
       </list>
     </recent_temporary>
   </component>
@@ -143,7 +145,7 @@
       <workItem from="1730213226002" duration="105000" />
       <workItem from="1730213532548" duration="16000" />
       <workItem from="1730227128069" duration="82000" />
-      <workItem from="1730228140546" duration="2310000" />
+      <workItem from="1730228140546" duration="3049000" />
     </task>
     <servers />
   </component>
