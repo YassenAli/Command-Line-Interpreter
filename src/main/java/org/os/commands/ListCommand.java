@@ -1,4 +1,4 @@
-package org.cmd.commands;
+package org.os.commands;
 
 
 import java.io.IOException;
