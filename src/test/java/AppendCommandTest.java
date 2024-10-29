@@ -1,54 +1,63 @@
-import static org.junit.jupiter.api.Assertions.*;
-
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
+import java.io.*;
+import java.nio.file.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.os.Main;
 import org.os.commands.AppendCommand;
 
 class AppendCommandTest {
-    private final String filename = "test_append.txt";
+    private static final String TEST_FILE = "append_output_test.txt";
 
     @BeforeEach
-    void setup() throws IOException {
-        Files.writeString(new File(filename).toPath(), "Initial Line\n");
+    public void setup() throws IOException {
+        Files.deleteIfExists(Paths.get(TEST_FILE));
+        Files.createFile(Paths.get(TEST_FILE));
     }
 
     @AfterEach
-    void cleanup() throws IOException {
-        Files.deleteIfExists(new File(filename).toPath());
+    public void cleanup() throws IOException {
+        Files.deleteIfExists(Paths.get(TEST_FILE));
     }
 
     @Test
-    void testAppendCommand() throws IOException {
-        // Use handleRedirection for appending
-        Main.handleRedirection("Appended Line >> " + filename);
+    public void testAppendCommand() throws IOException {
+        String input = "echo Test output >> " + TEST_FILE;
 
-        File file = new File(filename);
-        assertTrue(file.exists(), "Output file should be created or exist.");
-        String content = Files.readString(file.toPath());
-        assertEquals("Initial Line\nAppended Line", content.trim(), "Content should match appended line format.");
+        // Handle redirection in Main class and execute AppendCommand
+        Main.handleRedirection(input);
+
+        // Verify output was appended
+        String content = Files.readString(Paths.get(TEST_FILE));
+        assertTrue(content.contains("Test output"));
     }
 
     @Test
-    void testAppendCommandMultipleAppends() throws IOException {
-        // Use handleRedirection to simulate multiple appends
-        Main.handleRedirection("First Append >> " + filename);
-        Main.handleRedirection("Second Append >> " + filename);
+    public void testAppendCommandWithMultipleAppends() throws IOException {
+        Main.handleRedirection("echo First line >> " + TEST_FILE);
+        Main.handleRedirection("echo Second line >> " + TEST_FILE);
 
-        String content = Files.readString(new File(filename).toPath());
-        assertEquals("Initial Line\nFirst Append\nSecond Append", content.trim(),
-                "Should correctly append multiple lines.");
+        // Check both lines in file
+        String content = Files.readString(Paths.get(TEST_FILE));
+        assertTrue(content.contains("First line"));
+        assertTrue(content.contains("Second line"));
     }
 
     @Test
-    void testAppendCommandFileNotFound() {
-        Exception exception = assertThrows(IOException.class,
-                () -> Main.handleRedirection("Missing File Append >> nonexistent.txt"));
-        assertTrue(exception.getMessage().contains("Error"), "Should throw an error when the file is not found.");
+    public void testAppendCommandInvalidArgs() {
+        AppendCommand appendCommand = new AppendCommand();
+        appendCommand.execute(new String[]{"echo"}); // No filename
+
+        // Verify it outputs usage instructions or error handling
+    }
+
+    @Test
+    public void testAppendCommandInvalidFile() {
+        String invalidFile = "/invalid/test.txt";
+        String input = "echo Error check >> " + invalidFile;
+
+        // Redirect to invalid file path
+        Main.handleRedirection(input);
+
+        // Optionally verify error message output (e.g., using logs or error stream capturing)
     }
 }

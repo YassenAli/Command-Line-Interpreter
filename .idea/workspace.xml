@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="528441ef-bc7b-4310-8a47-9af4a45d9eec" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="528441ef-bc7b-4310-8a47-9af4a45d9eec" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,6 +46,9 @@
     "JUnit.MoveCommandTest.TestMoveFile.executor": "Run",
     "JUnit.MoveCommandTest.executor": "Run",
     "JUnit.RedirectCommandTest.executor": "Run",
+    "JUnit.RedirectCommandTest.testRedirectCommand.executor": "Run",
+    "JUnit.RedirectCommandTest.testRedirectCommand_InvalidFile.executor": "Run",
+    "JUnit.RedirectCommandTest.testRedirectCommand_Overwrite.executor": "Run",
     "JUnit.java in CLI.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -72,7 +73,7 @@
       <recent name="E:\Semester 5\Operating Systems\Assignments\Assignment 1\CLI\src\main\java\org\os" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RedirectCommandTest">
+  <component name="RunManager" selected="JUnit.AppendCommandTest">
     <configuration name="AppendCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
       <option name="PACKAGE_NAME" value="" />
@@ -82,21 +83,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AppendCommandTest.testAppendCommandInvalidFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AppendCommandTest" />
+      <option name="METHOD_NAME" value="testAppendCommandInvalidFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RedirectCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="RedirectCommandTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RedirectCommandTest.testRedirectCommand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CLI" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RedirectCommandTest" />
-      <option name="METHOD_NAME" value="testRedirectCommand" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -123,11 +124,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AppendCommandTest" />
+        <item itemvalue="JUnit.AppendCommandTest.testAppendCommandInvalidFile" />
         <item itemvalue="JUnit.RedirectCommandTest" />
         <item itemvalue="JUnit.RedirectCommandTest.testRedirectCommand_InvalidFile" />
         <item itemvalue="JUnit.RedirectCommandTest.testRedirectCommand_Overwrite" />
-        <item itemvalue="JUnit.RedirectCommandTest.testRedirectCommand" />
-        <item itemvalue="JUnit.AppendCommandTest" />
       </list>
     </recent_temporary>
   </component>
@@ -144,7 +145,7 @@
       <workItem from="1730213226002" duration="105000" />
       <workItem from="1730213532548" duration="16000" />
       <workItem from="1730227128069" duration="82000" />
-      <workItem from="1730228140546" duration="4020000" />
+      <workItem from="1730228140546" duration="4340000" />
     </task>
     <servers />
   </component>
