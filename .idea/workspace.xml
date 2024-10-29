@@ -1,16 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="528441ef-bc7b-4310-8a47-9af4a45d9eec" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/AppendCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CatCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ListCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/MkdirCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/PipeCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/RedirectCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assignments.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/AppendCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/CatCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/CatCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/CdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/CdCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/CommandFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/ExitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/ExitCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/HelpCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/ListCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/ListCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/MkdirCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/MkdirCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/MoveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/MoveCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/PipeCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/PwdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/PwdCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/RedirectCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/RemoveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/RemoveCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/RemoveDirectoryCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/RemoveDirectoryCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/main/java/org/cmd/commands/TouchCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/TouchCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/test/java/org/cmd/commands/MoveCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MoveCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/test/java/org/cmd/commands/RemoveCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RemoveCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/test/java/org/cmd/commands/RemoveDirectoryCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RemoveDirectoryCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandLineInterpreter/src/test/java/org/cmd/commands/TouchCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TouchCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/os/commands/AppendCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/AppendCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/os/commands/PipeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/PipeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/os/commands/RedirectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/RedirectCommand.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2o7Ar21jEXeSsuqpKHwO73NolZq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "JUnit.All in CLI.executor": "Run",
+    "JUnit.CatCommandTest.executor": "Run",
+    "JUnit.ListCommandTest.executor": "Run",
+    "JUnit.MkdirCommandTest.executor": "Run",
+    "JUnit.MkdirCommandTest.testExecuteCreatesDirectory.executor": "Run",
+    "JUnit.java in CLI.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Merging Yassin",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "Y:/FCAI/Level 3/Operating System/Assignments/OS-Assignment-1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "E:/Semester 5/Operating Systems/Assignments/Assignment 1/CLI/src/main/java/org/os/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Semester 5\Operating Systems\Assignments\Assignment 1\CLI\src\main\java\org\os" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.java in CLI">
+    <configuration name="All in CLI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
+    <configuration name="MkdirCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MkdirCommandTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MkdirCommandTest.testExecuteCreatesDirectory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MkdirCommandTest" />
+      <option name="METHOD_NAME" value="testExecuteCreatesDirectory" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java in CLI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLI" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.java in CLI" />
+        <item itemvalue="JUnit.MkdirCommandTest" />
+        <item itemvalue="JUnit.All in CLI" />
+        <item itemvalue="JUnit.MkdirCommandTest.testExecuteCreatesDirectory" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="528441ef-bc7b-4310-8a47-9af4a45d9eec" name="Changes" comment="" />
+      <created>1730210435919</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1730210435919</updated>
+      <workItem from="1730210436877" duration="1913000" />
+      <workItem from="1730212556599" duration="321000" />
+      <workItem from="1730213226002" duration="105000" />
+      <workItem from="1730213532548" duration="16000" />
+      <workItem from="1730227128069" duration="82000" />
+      <workItem from="1730228140546" duration="305000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
