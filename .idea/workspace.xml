@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="528441ef-bc7b-4310-8a47-9af4a45d9eec" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/os/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RedirectCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RedirectCommandTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,10 +39,15 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "JUnit.All in CLI.executor": "Run",
+    "JUnit.AppendCommandTest.testAppendCommand.executor": "Run",
     "JUnit.CatCommandTest.executor": "Run",
+    "JUnit.CatCommandTest.testCatCommand.executor": "Run",
     "JUnit.ListCommandTest.executor": "Run",
     "JUnit.MkdirCommandTest.executor": "Run",
     "JUnit.MkdirCommandTest.testExecuteCreatesDirectory.executor": "Run",
+    "JUnit.MoveCommandTest.TestMoveFile.executor": "Run",
+    "JUnit.MoveCommandTest.executor": "Run",
+    "JUnit.RedirectCommandTest.executor": "Run",
     "JUnit.java in CLI.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -66,48 +72,61 @@
       <recent name="E:\Semester 5\Operating Systems\Assignments\Assignment 1\CLI\src\main\java\org\os" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.java in CLI">
-    <configuration name="All in CLI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AppendCommandTest">
+    <configuration name="AppendCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MkdirCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CLI" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MkdirCommandTest" />
+      <option name="MAIN_CLASS_NAME" value="AppendCommandTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MkdirCommandTest.testExecuteCreatesDirectory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppendCommandTest.testAppendCommand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MkdirCommandTest" />
-      <option name="METHOD_NAME" value="testExecuteCreatesDirectory" />
+      <option name="MAIN_CLASS_NAME" value="AppendCommandTest" />
+      <option name="METHOD_NAME" value="testAppendCommand" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="java in CLI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CatCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CatCommandTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CatCommandTest.testCatCommand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CatCommandTest" />
+      <option name="METHOD_NAME" value="testCatCommand" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedirectCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RedirectCommandTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.java in CLI" />
-        <item itemvalue="JUnit.MkdirCommandTest" />
-        <item itemvalue="JUnit.All in CLI" />
-        <item itemvalue="JUnit.MkdirCommandTest.testExecuteCreatesDirectory" />
+        <item itemvalue="JUnit.AppendCommandTest" />
+        <item itemvalue="JUnit.CatCommandTest" />
+        <item itemvalue="JUnit.RedirectCommandTest" />
+        <item itemvalue="JUnit.CatCommandTest.testCatCommand" />
+        <item itemvalue="JUnit.AppendCommandTest.testAppendCommand" />
       </list>
     </recent_temporary>
   </component>
@@ -124,7 +143,7 @@
       <workItem from="1730213226002" duration="105000" />
       <workItem from="1730213532548" duration="16000" />
       <workItem from="1730227128069" duration="82000" />
-      <workItem from="1730228140546" duration="808000" />
+      <workItem from="1730228140546" duration="2310000" />
     </task>
     <servers />
   </component>
