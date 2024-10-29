@@ -27,13 +27,11 @@ public class Main {
             String[] splitInput = input.split("\\s+");
             String commandName = splitInput[0];
 
-            // Handle redirection and piping cases
             if (input.contains(">") || input.contains(">>")) {
                 handleRedirection(input);
             } else if (input.contains("|")) {
                 handlePipe(input);
             } else {
-                // Normal command execution
                 Command command = CommandFactory.getCommand(commandName);
                 if (command != null) {
                     String[] commandArgs = Arrays.copyOfRange(splitInput, 1, splitInput.length);
@@ -49,22 +47,19 @@ public class Main {
         String[] splitInput = input.split("\\s+");
         boolean append = input.contains(">>");
 
-        // Identify the command and its arguments
         int redirectIndex = input.indexOf(append ? ">>" : ">");
-        String commandPart = input.substring(0, redirectIndex).trim(); // Extract the command part
-        String filename = input.substring(redirectIndex + (append ? 2 : 1)).trim(); // Get the filename
+        String commandPart = input.substring(0, redirectIndex).trim();
+        String filename = input.substring(redirectIndex + (append ? 2 : 1)).trim();
 
-        String[] commandArgs = commandPart.split("\\s+"); // Split command and its arguments
+        String[] commandArgs = commandPart.split("\\s+");
 
-        // Create the command based on redirection type
         Command command = append ? CommandFactory.getCommand(">>") : CommandFactory.getCommand(">");
 
         if (command != null) {
-            // Combine the command arguments with the filename for redirection
             String[] fullCommandArgs = Arrays.copyOf(commandArgs, commandArgs.length + 1);
-            fullCommandArgs[fullCommandArgs.length - 1] = filename; // Add filename as the last argument
+            fullCommandArgs[fullCommandArgs.length - 1] = filename;
 
-            command.execute(fullCommandArgs); // Execute the command with redirection
+            command.execute(fullCommandArgs);
         } else {
             System.out.println("Invalid redirection command.");
         }
