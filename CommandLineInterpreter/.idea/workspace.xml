@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9fbec037-d30f-4672-8986-f109ff2e400f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../src/test/java/AppendCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cmd/commands/RemoveDirectoryCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/org/os/commands/RemoveDirectoryCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/cmd/commands/MoveCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/test/java/MoveCommandTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2nw2G2miWNVi2ccCl0s90l4oPQ7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Merging Yassin",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "Y:/FCAI/Level 3/Operating System/Assignments/OS-Assignment-1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "Y:/FCAI/Level 3/Operating System/Assignments/OS-Assignment-1/CommandLineInterpreter/src/main/java/org/cmd/Main.java",
+    "settings.editor.selected.configurable": "project.propCompiler",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9fbec037-d30f-4672-8986-f109ff2e400f" name="Changes" comment="" />
+      <created>1729869720749</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729869720749</updated>
+      <workItem from="1729869721815" duration="2710000" />
+      <workItem from="1729874237529" duration="818000" />
+      <workItem from="1730173097940" duration="612000" />
+      <workItem from="1730211856777" duration="12739000" />
+      <workItem from="1730227690637" duration="448000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

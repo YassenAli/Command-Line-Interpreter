@@ -1,6 +1,5 @@
 package org.os.commands;
 
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -36,5 +35,4 @@ public class MkdirCommand implements Command {
             System.out.println("Error creating directory: " + e.getMessage());
         }
     }
-
 }
