@@ -45,16 +45,40 @@ public class Main {
 
     private static void handleRedirection(String input) {
         String[] splitInput = input.split("\\s+");
-        String commandOutput = splitInput[0];
         boolean append = input.contains(">>");
+
+        // Identify the command and its arguments
+        int redirectIndex = input.indexOf(append ? ">>" : ">");
+        String commandPart = input.substring(0, redirectIndex).trim(); // Extract the command part
+        String filename = input.substring(redirectIndex + (append ? 2 : 1)).trim(); // Get the filename
+
+        String[] commandArgs = commandPart.split("\\s+"); // Split command and its arguments
+
+        // Create the command based on redirection type
         Command command = append ? CommandFactory.getCommand(">>") : CommandFactory.getCommand(">");
 
         if (command != null) {
-            command.execute(Arrays.copyOfRange(splitInput, 1, splitInput.length));
+            // Combine the command arguments with the filename for redirection
+            String[] fullCommandArgs = Arrays.copyOf(commandArgs, commandArgs.length + 1);
+            fullCommandArgs[fullCommandArgs.length - 1] = filename; // Add filename as the last argument
+
+            command.execute(fullCommandArgs); // Execute the command with redirection
         } else {
             System.out.println("Invalid redirection command.");
         }
     }
+//    private static void handleRedirection(String input) {
+//        String[] splitInput = input.split("\\s+");
+//        String commandOutput = splitInput[0];
+//        boolean append = input.contains(">>");
+//        Command command = append ? CommandFactory.getCommand(">>") : CommandFactory.getCommand(">");
+//
+//        if (command != null) {
+//            command.execute(Arrays.copyOfRange(splitInput, 1, splitInput.length));
+//        } else {
+//            System.out.println("Invalid redirection command.");
+//        }
+//    }
 
     private static void handlePipe(String input) {
         String[] pipeParts = input.split("\\|");

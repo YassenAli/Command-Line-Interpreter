@@ -1,3 +1,5 @@
+package org.cmd.commands;
+
 import org.cmd.commands.AppendCommand;
 
 import org.junit.jupiter.api.AfterEach;
