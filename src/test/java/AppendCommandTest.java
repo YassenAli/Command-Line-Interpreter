@@ -1,7 +1,12 @@
-import org.junit.jupiter.api.*;
-import java.io.*;
-import java.nio.file.*;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.os.Main;
 import org.os.commands.AppendCommand;
 
@@ -34,7 +39,6 @@ class AppendCommandTest {
         Main.handleRedirection("echo First line >> " + TEST_FILE);
         Main.handleRedirection("echo Second line >> " + TEST_FILE);
 
-        // Check both lines in file
         String content = Files.readString(Paths.get(TEST_FILE));
         assertTrue(content.contains("First line"));
         assertTrue(content.contains("Second line"));
@@ -43,7 +47,7 @@ class AppendCommandTest {
     @Test
     public void testAppendCommandInvalidArgs() {
         AppendCommand appendCommand = new AppendCommand();
-        appendCommand.execute(new String[]{"echo"});
+        appendCommand.execute(new String[] { "echo" });
     }
 
     @Test
