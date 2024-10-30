@@ -1,122 +1,92 @@
 import org.junit.jupiter.api.*;
+import org.os.Main;
 import org.os.commands.ListCommand;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import java.nio.file.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ListCommandTest {
-    private ListCommand listCommand;
-    private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
-    private final PrintStream originalOut = System.out;
-    private Path testDirectory;
+class ListCommandTest {
+
+    private final ListCommand listCommand = new ListCommand();
+    private final ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+    private final Path testDir = Paths.get("testDir");
 
     @BeforeEach
-    public void setUp() throws IOException {
-        listCommand = new ListCommand();
-        testDirectory = Files.createTempDirectory("testDir");
-        System.setOut(new PrintStream(outputStreamCaptor));
+    void setUp() throws Exception {
+        System.setOut(new PrintStream(outputStream));
+        Files.createDirectories(testDir);
+        Files.createFile(testDir.resolve("file1.txt"));
+        Files.createFile(testDir.resolve(".hiddenFile.txt"));
+        Files.createDirectories(testDir.resolve("subDir"));
     }
 
     @AfterEach
-    public void tearDown() throws IOException {
-        // Clean up the test directory and its contents
-        if (Files.exists(testDirectory)) {
-            deleteDirectory(testDirectory);
-        }
-        System.setOut(originalOut);
-    }
-
-    private void deleteDirectory(Path directory) throws IOException {
-        if (Files.isDirectory(directory)) {
-            // List and delete all files and subdirectories
-            Files.list(directory).forEach(path -> {
-                try {
-                    deleteDirectory(path); // Recursively delete subdirectories
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            });
-        }
-        Files.delete(directory); // Delete the directory or file
+    void tearDown() throws Exception {
+        System.setOut(System.out);
+        Files.walk(testDir)
+                .map(Path::toFile)
+                .sorted((a, b) -> b.compareTo(a)) // Delete files before directories
+                .forEach(f -> f.delete());
     }
 
     @Test
-    public void testExecuteListsFiles() throws IOException {
-        // Create a test file
-        Path testFile = testDirectory.resolve("testFile.txt");
-        Files.createFile(testFile);
+    void testListFilesNonRecursive() {
+        Main.currentDirectory = testDir.toString();
+        listCommand.execute(new String[]{});
+        String output = outputStream.toString();
 
-        listCommand.execute(new String[]{testDirectory.toString()});
-
-        String output = outputStreamCaptor.toString();
-        assertTrue(output.contains("- testFile.txt"), "Output should list the created file.");
+        assertTrue(output.contains("- file1.txt"));
+        assertTrue(output.contains("d subDir"));
+        assertFalse(output.contains(".hiddenFile.txt"));
     }
 
     @Test
-    public void testExecuteWithHiddenFile() throws IOException {
-        // Create a hidden file
-        Path hiddenFile = testDirectory.resolve(".hiddenFile");
-        Files.createFile(hiddenFile);
+    void testListFilesWithHiddenFlag() {
+        Main.currentDirectory = testDir.toString();
+        listCommand.execute(new String[]{"-a"});
+        String output = outputStream.toString();
 
-        listCommand.execute(new String[]{testDirectory.toString()});
-
-        String output = outputStreamCaptor.toString();
-        assertFalse(output.contains(".hiddenFile"), "Output should not list the hidden file.");
+        assertTrue(output.contains("- file1.txt"));
+        assertTrue(output.contains("d subDir"));
+        assertTrue(output.contains("- .hiddenFile.txt"));
     }
 
     @Test
-    public void testExecuteListsAllFiles() throws IOException {
-        // Create a hidden file
-        Path hiddenFile = testDirectory.resolve(".hiddenFile");
-        Files.createFile(hiddenFile);
-        // Create a visible file
-        Path visibleFile = testDirectory.resolve("visibleFile.txt");
-        Files.createFile(visibleFile);
+    void testListFilesInvalidDirectory() {
+        Main.currentDirectory = "nonExistentDir";
+        listCommand.execute(new String[]{});
+        String output = outputStream.toString().trim();
 
-        listCommand.execute(new String[]{"-a", testDirectory.toString()});
-
-        String output = outputStreamCaptor.toString();
-        assertTrue(output.contains(".hiddenFile"), "Output should list the hidden file when -a flag is used.");
-        assertTrue(output.contains("visibleFile.txt"), "Output should list the visible file.");
+        assertEquals("Invalid directory: .", output);
     }
 
     @Test
-    public void testExecuteWithInvalidDirectory() {
-        listCommand.execute(new String[]{"invalidDir"});
+    void testListFilesRecursive() throws IOException {
+        Files.createFile(testDir.resolve("subDir").resolve("fileInSubDir.txt"));
+        Main.currentDirectory = testDir.toString();
+        listCommand.execute(new String[]{"-r"});
+        String output = outputStream.toString();
 
-        String output = outputStreamCaptor.toString();
-        assertEquals("Invalid directory: invalidDir", output.trim(), "Output should indicate the directory is invalid.");
+        assertTrue(output.contains("- file1.txt"));
+        assertTrue(output.contains("d subDir"));
+        assertTrue(output.contains("  - fileInSubDir.txt"));
+        assertFalse(output.contains(".hiddenFile.txt"));
     }
 
     @Test
-    public void testExecuteListsFilesRecursively() throws IOException {
-        // Create a subdirectory and a file inside it
-        Path subDir = testDirectory.resolve("subDir");
-        Files.createDirectory(subDir);
-        Files.createFile(subDir.resolve("subFile.txt"));
+    void testListFilesRecursiveWithHidden() throws IOException, IOException {
+        Files.createFile(testDir.resolve("subDir").resolve(".hiddenFileInSubDir.txt"));
+        Main.currentDirectory = testDir.toString();
+        listCommand.execute(new String[]{"-a", "-r"});
+        String output = outputStream.toString();
 
-        listCommand.execute(new String[]{"-r", testDirectory.toString()});
-
-        String output = outputStreamCaptor.toString();
-        assertTrue(output.contains("d subDir"), "Output should list the subdirectory.");
-        assertTrue(output.contains("- subFile.txt"), "Output should list the file in the subdirectory.");
-    }
-
-    @Test
-    public void testExecuteRecursivelyWithHiddenFile() throws IOException {
-        // Create a subdirectory and a hidden file inside it
-        Path subDir = testDirectory.resolve("subDir");
-        Files.createDirectory(subDir);
-        Files.createFile(subDir.resolve(".hiddenSubFile"));
-
-        listCommand.execute(new String[]{"-r", testDirectory.toString()});
-
-        String output = outputStreamCaptor.toString();
-        assertFalse(output.contains(".hiddenSubFile"), "Output should not list the hidden file in the subdirectory.");
+        assertTrue(output.contains("- file1.txt"));
+        assertTrue(output.contains("d subDir"));
+        assertTrue(output.contains("  - .hiddenFileInSubDir.txt"));
+        assertTrue(output.contains("- .hiddenFile.txt"));
     }
 }
