@@ -1,4 +1,5 @@
 package org.os.commands;
+import org.os.Main;
 
 import java.io.BufferedWriter;
 import java.io.BufferedReader;
@@ -6,8 +7,10 @@ import java.io.InputStreamReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Arrays;
+import java.io.File;
 
 public class RedirectCommand implements Command {
+
     @Override
     public void execute(String[] args) {
         if (args.length < 2) {
@@ -16,49 +19,49 @@ public class RedirectCommand implements Command {
         }
 
         String filename = args[args.length - 1];
-        String[] commandArgs = Arrays.copyOf(args, args.length - 1);
+        String command = args[0].toLowerCase();
+        String content = String.join(" ", Arrays.copyOfRange(args, 1, args.length - 1));
 
-        // Determine OS-specific command
-        String os = System.getProperty("os.name").toLowerCase();
-        String command = os.contains("win") ? "cmd.exe" : commandArgs[0]; // Assuming the first argument is the command
-        if (commandArgs[0].equals("ls")) {
-            // Map 'ls' to 'dir' for Windows
-            commandArgs[0] = "dir";
-        }
-
-        ProcessBuilder processBuilder;
-
-        try {
-            // For Windows, we need to use cmd to run the command
-            if (os.contains("win")) {
-                processBuilder = new ProcessBuilder("cmd.exe", "/c", String.join(" ", commandArgs));
-            } else {
-                // For Unix-like systems
-                processBuilder = new ProcessBuilder(commandArgs);
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
+            switch (command) {
+                case "ls":
+                    listDirectory(writer);
+                    break;
+                case "pwd":
+                    printWorkingDirectory(writer);
+                    break;
+                case "echo":
+                    writer.write(content);
+                    writer.newLine();
+                    System.out.println("Text echoed and redirected to file.");
+                    break;
+                default:
+                    System.out.println("Invalid or unsupported command for redirection: " + command);
             }
-
-            // Start the process and get the output
-            Process process = processBuilder.start();
-
-            // Read the output from the command
-            try (BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-                 BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    writer.write(line);
-                    writer.newLine(); // Write line by line
-                }
-            }
-
-            int exitCode = process.waitFor();
-            if (exitCode == 0) {
-                System.out.println("Output redirected to " + filename);
-            } else {
-                System.err.println("Command exited with code: " + exitCode);
-            }
-        } catch (IOException | InterruptedException e) {
+        } catch (IOException e) {
             System.err.println("Error: " + e.getMessage());
         }
+    }
+
+    private void listDirectory(BufferedWriter writer) throws IOException {
+        File currentDir = new File(Main.currentDirectory);
+        File[] filesList = currentDir.listFiles();
+
+        if (filesList != null) {
+            for (File file : filesList) {
+                writer.write(file.getName());
+                writer.newLine();
+            }
+            System.out.println("Directory listing redirected to file.");
+        } else {
+            System.out.println("Could not list directory contents.");
+        }
+    }
+
+    private void printWorkingDirectory(BufferedWriter writer) throws IOException {
+        writer.write(Main.currentDirectory);
+        writer.newLine();
+        System.out.println("Working directory path redirected to file.");
     }
 }
 
@@ -73,33 +76,40 @@ public class RedirectCommand implements Command {
         String filename = args[args.length - 1];
         String[] commandArgs = Arrays.copyOf(args, args.length - 1);
 
+        String os = System.getProperty("os.name").toLowerCase();
+        String command = os.contains("win") ? "cmd.exe" : commandArgs[0];
+        if (commandArgs[0].equals("ls")) {
+            commandArgs[0] = "dir";
+        }
+
+        ProcessBuilder processBuilder;
+
         try {
-            ProcessBuilder pb = new ProcessBuilder(commandArgs);
-            Process process = pb.start();
-            BufferedWriter writer = new BufferedWriter(new FileWriter(filename));
-            writer.write(new String(process.getInputStream().readAllBytes()));
-            writer.close();
-        } catch (IOException e) {
-            System.out.println("Error: " + e.getMessage());
-        }
-    }
-}*/
+            if (os.contains("win")) {
+                processBuilder = new ProcessBuilder("cmd.exe", "/c", String.join(" ", commandArgs));
+            } else {
+                processBuilder = new ProcessBuilder(commandArgs);
+            }
 
-/*public class RedirectCommand implements Command {
-    @Override
-    public void execute(String[] args) {
-        if (args.length < 3) {
-            System.out.println("Usage: <command> > <filename>");
-            return;
-        }
+            Process process = processBuilder.start();
 
-        String commandOutput = args[0];
-        String filename = args[2];
+            try (BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+                 BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    writer.write(line);
+                    writer.newLine();
+                }
+            }
 
-        try (FileWriter writer = new FileWriter(filename, false)) {
-            writer.write(commandOutput);
-        } catch (IOException e) {
-            System.out.println("Error writing to file: " + filename);
+            int exitCode = process.waitFor();
+            if (exitCode == 0) {
+                System.out.println("Output redirected to " + filename);
+            } else {
+                System.err.println("Command exited with code: " + exitCode);
+            }
+        } catch (IOException | InterruptedException e) {
+            System.err.println("Error: " + e.getMessage());
         }
     }
 }*/

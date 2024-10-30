@@ -1,0 +1,11 @@
+.git
+.gitignore
+.idea
+Hello
+nonexistent.txt
+pom.xml
+README.md
+src
+target
+test_output.txt
+tt.txt

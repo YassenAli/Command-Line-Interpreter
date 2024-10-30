@@ -1,37 +1,67 @@
 import org.os.commands.RedirectCommand;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
+import java.io.*;
+import java.nio.file.*;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
+import static org.junit.jupiter.api.Assertions.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-class RedirectCommandTest {
-
-    private final String filename = "test_output.txt";
+public class RedirectCommandTest {
+    private static final String TEST_FILE = "test_output_redirect.txt";
 
     @BeforeEach
-    void setup() throws IOException {
-        Files.deleteIfExists(new File(filename).toPath());
+    public void setup() throws IOException {
+        Files.deleteIfExists(Paths.get(TEST_FILE));
+        Files.createFile(Paths.get(TEST_FILE));
     }
 
     @AfterEach
-    void cleanup() throws IOException {
-        Files.deleteIfExists(new File(filename).toPath());
+    public void cleanup() throws IOException {
+        Files.deleteIfExists(Paths.get(TEST_FILE));
     }
 
     @Test
-    void testRedirectCommand() throws IOException {
-        RedirectCommand redirectCommand = new RedirectCommand();
-        redirectCommand.execute(new String[]{"Hello, World!", filename});
+    public void testRedirectCommand() throws IOException {
+        String[] args = {"echo", "Redirected output"};
+        args = addFilenameToArgs(args, TEST_FILE);
 
-        File file = new File(filename);
-        assertTrue(file.exists());
-        assertEquals("Hello, World!", Files.readString(file.toPath()).trim());
+        RedirectCommand redirectCommand = new RedirectCommand();
+        redirectCommand.execute(args);
+
+        // Check that the file contains the redirected output, and ensure it's not appended
+        String content = Files.readString(Paths.get(TEST_FILE));
+        assertTrue(content.contains("Redirected output"));
+    }
+
+    @Test
+    public void testRedirectCommand_Overwrite() throws IOException {
+        Files.writeString(Paths.get(TEST_FILE), "Existing content");
+
+        String[] args = {"echo", "New content"};
+        args = addFilenameToArgs(args, TEST_FILE);
+
+        RedirectCommand redirectCommand = new RedirectCommand();
+        redirectCommand.execute(args);
+
+        // Verify the file was overwritten with "New content"
+        String content = Files.readString(Paths.get(TEST_FILE));
+        assertTrue(content.contains("New content") && !content.contains("Existing content"),
+                "File should be overwritten with new content");
+    }
+
+    @Test
+    public void testRedirectCommand_InvalidFile() {
+        String invalidFilename = "/invalid_path/test.txt";
+        String[] args = {"echo", "Some output", invalidFilename};
+
+        RedirectCommand redirectCommand = new RedirectCommand();
+        redirectCommand.execute(args);
+    }
+
+    private String[] addFilenameToArgs(String[] args, String filename) {
+        String[] newArgs = new String[args.length + 1];
+        System.arraycopy(args, 0, newArgs, 0, args.length);
+        newArgs[args.length] = filename;
+        return newArgs;
     }
 }
