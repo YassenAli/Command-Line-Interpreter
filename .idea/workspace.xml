@@ -6,6 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="528441ef-bc7b-4310-8a47-9af4a45d9eec" name="Changes" comment="exit, pwd, help Test are done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hello" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/existingFile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nonexistent.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/os/commands/MoveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/MoveCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MoveCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MoveCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testDir/file1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testDir/file2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testDir/file3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tt.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +61,53 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CdCommand.executor": "Run",
+    "Application.Main.executor": "Run",
+    "JUnit.All in CLI.executor": "Run",
+    "JUnit.AppendCommandTest.executor": "Run",
+    "JUnit.AppendCommandTest.testAppendCommand.executor": "Run",
+    "JUnit.AppendCommandTest.testAppendCommandInvalidFile.executor": "Run",
+    "JUnit.CatCommandTest.executor": "Run",
+    "JUnit.CatCommandTest.testCatCommand.executor": "Run",
+    "JUnit.CdCommandTest.executor": "Run",
+    "JUnit.ExitCommandTest.executor": "Run",
+    "JUnit.HelpCommandTest.executor": "Run",
+    "JUnit.ListCommandTest.executor": "Run",
+    "JUnit.MkdirCommandTest.executor": "Run",
+    "JUnit.MkdirCommandTest.testExecuteCreatesDirectory.executor": "Run",
+    "JUnit.MoveCommandTest.TestMoveFile.executor": "Run",
+    "JUnit.MoveCommandTest.executor": "Run",
+    "JUnit.PipeCommandTest.executor": "Run",
+    "JUnit.PwdCommandTest.executor": "Run",
+    "JUnit.RedirectCommandTest.executor": "Run",
+    "JUnit.RedirectCommandTest.testRedirectCommand.executor": "Run",
+    "JUnit.RedirectCommandTest.testRedirectCommand_InvalidFile.executor": "Run",
+    "JUnit.RedirectCommandTest.testRedirectCommand_Overwrite.executor": "Run",
+    "JUnit.RemoveCommandTest.executor": "Run",
+    "JUnit.RemoveDirectoryCommandTest.executor": "Run",
+    "JUnit.TouchCommandTest.executor": "Run",
+    "JUnit.java in CLI.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/old data/AI/level 3/operating systems/OS-Assignment-1/src/main/java/org/os/commands",
+    "last_opened_file_path": "Y:/FCAI/Level 3/Operating System/Assignments/OS-Assignment-1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "E:/Semester 5/Operating Systems/Assignments/Assignment 1/CLI/src/main/java/org/os/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.CdCommand.executor&quot;: &quot;Run&quot;,
@@ -103,6 +161,7 @@
       <recent name="org.os.commands" />
     </key>
   </component>
+  <component name="RunManager" selected="JUnit.CdCommandTest">
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.os.Main" />
@@ -131,7 +190,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ListCommandTest" />
       <option name="TEST_OBJECT" value="class" />
-      <dir value="$PROJECT_DIR$/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -145,6 +203,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MoveCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MoveCommandTest" />
+      <option name="TEST_OBJECT" value="class" />
     <configuration name="java in CLI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
       <option name="TEST_OBJECT" value="directory" />
@@ -155,11 +218,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CdCommandTest" />
+        <item itemvalue="JUnit.MoveCommandTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.MkdirCommandTest" />
         <item itemvalue="JUnit.ListCommandTest" />
-        <item itemvalue="JUnit.java in CLI" />
-        <item itemvalue="JUnit.CdCommandTest" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
