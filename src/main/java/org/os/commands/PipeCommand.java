@@ -1,21 +1,13 @@
 package org.os.commands;
-import org.os.Main;
 
-import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedHashSet;
+import java.util.Collections;
+import java.util.List;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
-import java.io.PrintStream;
-import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
-
-import java.io.*;
-import java.util.*;
+import org.os.Main;
 
 public class PipeCommand implements Command {
 
@@ -26,22 +18,18 @@ public class PipeCommand implements Command {
             return;
         }
 
-        // Split commands by pipe
         String[] commands = Arrays.stream(args).map(String::trim).toArray(String[]::new);
         List<String> intermediateOutput = null;
 
         try {
             for (String commandWithArgs : commands) {
-                // Split each command and its arguments
                 String[] commandParts = commandWithArgs.split("\\s+");
                 String command = commandParts[0].toLowerCase();
                 String[] commandArgs = Arrays.copyOfRange(commandParts, 1, commandParts.length);
 
-                // Execute command with input from the previous command's output
                 intermediateOutput = executeCommand(command, commandArgs, intermediateOutput);
             }
 
-            // Print the final output
             if (intermediateOutput != null) {
                 for (String line : intermediateOutput) {
                     System.out.println(line);
@@ -136,96 +124,97 @@ public class PipeCommand implements Command {
     }
 }
 
-//public class PipeCommand implements Command {
-//    @Override
-//    public void execute(String[] args) {
-//        if (args.length < 2) {
-//            System.out.println("Invalid pipe command. Usage: command1 | command2");
-//            return;
-//        }
+// public class PipeCommand implements Command {
+// @Override
+// public void execute(String[] args) {
+// if (args.length < 2) {
+// System.out.println("Invalid pipe command. Usage: command1 | command2");
+// return;
+// }
 //
-//        // Split the arguments into the first and second commands
-//        String firstCommandName = args[0].trim();
-//        String secondCommandName = args[1].trim();
+// // Split the arguments into the first and second commands
+// String firstCommandName = args[0].trim();
+// String secondCommandName = args[1].trim();
 //
-//        // Execute the first command
-//        String output = executeCommand(firstCommandName, args);
-//        if (output != null) {
-//            // Pass the output to the second command
-//            executeSecondCommand(secondCommandName, output);
-//        }
-//    }
+// // Execute the first command
+// String output = executeCommand(firstCommandName, args);
+// if (output != null) {
+// // Pass the output to the second command
+// executeSecondCommand(secondCommandName, output);
+// }
+// }
 //
-//    private String executeCommand(String commandName, String[] args) {
-//        StringBuilder output = new StringBuilder();
-//        try {
-//            // Set up the command process
-//            ProcessBuilder processBuilder = new ProcessBuilder(commandName);
-//            String[] commandWithArgs = new String[args.length + 1];
-//            commandWithArgs[0] = commandName;
-//            System.arraycopy(args, 0, commandWithArgs, 1, args.length);
-//            processBuilder.command(commandWithArgs);
-//            Process process = processBuilder.start();
+// private String executeCommand(String commandName, String[] args) {
+// StringBuilder output = new StringBuilder();
+// try {
+// // Set up the command process
+// ProcessBuilder processBuilder = new ProcessBuilder(commandName);
+// String[] commandWithArgs = new String[args.length + 1];
+// commandWithArgs[0] = commandName;
+// System.arraycopy(args, 0, commandWithArgs, 1, args.length);
+// processBuilder.command(commandWithArgs);
+// Process process = processBuilder.start();
 //
-//            // Capture the output of the command
-//            try (BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()))) {
-//                String line;
-//                while ((line = reader.readLine()) != null) {
-//                    output.append(line).append(System.lineSeparator());
-//                }
-//            }
+// // Capture the output of the command
+// try (BufferedReader reader = new BufferedReader(new
+// InputStreamReader(process.getInputStream()))) {
+// String line;
+// while ((line = reader.readLine()) != null) {
+// output.append(line).append(System.lineSeparator());
+// }
+// }
 //
-//            process.waitFor(); // Wait for the process to complete
-//            return output.toString(); // Return captured output
-//        } catch (IOException | InterruptedException e) {
-//            System.out.println("Error executing command: " + commandName);
-//            return null;
-//        }
-//    }
+// process.waitFor(); // Wait for the process to complete
+// return output.toString(); // Return captured output
+// } catch (IOException | InterruptedException e) {
+// System.out.println("Error executing command: " + commandName);
+// return null;
+// }
+// }
 //
-//    private void executeSecondCommand(String commandName, String input) {
-//        switch (commandName.toLowerCase()) {
-//            case "uniq":
-//                executeUniq(input);
-//                break;
-//            case "sort":
-//                executeSort(input);
-//                break;
-//            case "grep":
-//                executeGrep(input);
-//                break;
-//            // Add other commands here as needed
-//            default:
-//                System.out.println("Invalid command: " + commandName);
-//        }
-//    }
+// private void executeSecondCommand(String commandName, String input) {
+// switch (commandName.toLowerCase()) {
+// case "uniq":
+// executeUniq(input);
+// break;
+// case "sort":
+// executeSort(input);
+// break;
+// case "grep":
+// executeGrep(input);
+// break;
+// // Add other commands here as needed
+// default:
+// System.out.println("Invalid command: " + commandName);
+// }
+// }
 //
-//    private void executeUniq(String input) {
-//        LinkedHashSet<String> uniqueLines = new LinkedHashSet<>();
-//        for (String line : input.split(System.lineSeparator())) {
-//            uniqueLines.add(line);
-//        }
-//        uniqueLines.forEach(System.out::println);
-//    }
+// private void executeUniq(String input) {
+// LinkedHashSet<String> uniqueLines = new LinkedHashSet<>();
+// for (String line : input.split(System.lineSeparator())) {
+// uniqueLines.add(line);
+// }
+// uniqueLines.forEach(System.out::println);
+// }
 //
-//    private void executeSort(String input) {
-//        String[] lines = input.split(System.lineSeparator());
-//        Arrays.sort(lines);
-//        for (String line : lines) {
-//            System.out.println(line);
-//        }
-//    }
+// private void executeSort(String input) {
+// String[] lines = input.split(System.lineSeparator());
+// Arrays.sort(lines);
+// for (String line : lines) {
+// System.out.println(line);
+// }
+// }
 //
-//    private void executeGrep(String input) {
-//        // Example grep implementation that filters based on a hardcoded term
-//        String searchTerm = "3"; // You can modify this to get from args or input
-//        for (String line : input.split(System.lineSeparator())) {
-//            if (line.contains(searchTerm)) {
-//                System.out.println(line);
-//            }
-//        }
-//    }
-//}
+// private void executeGrep(String input) {
+// // Example grep implementation that filters based on a hardcoded term
+// String searchTerm = "3"; // You can modify this to get from args or input
+// for (String line : input.split(System.lineSeparator())) {
+// if (line.contains(searchTerm)) {
+// System.out.println(line);
+// }
+// }
+// }
+// }
 /*
  * @Override
  * public void execute(String[] args) {

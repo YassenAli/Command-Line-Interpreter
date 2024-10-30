@@ -35,23 +35,23 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
+    &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
     &quot;assignee&quot;: &quot;mariemomar&quot;
-  }
-}</component>
+    }
+    }</component>
   <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/YassenAli/OS-Assignment-1.git&quot;,
     &quot;accountId&quot;: &quot;d4001a21-2be8-41fa-80af-bfefd41a1dd4&quot;
-  }
-}</component>
+    }
+    }</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
-}</component>
+    &quot;associatedIndex&quot;: 6
+    }</component>
   <component name="ProjectId" id="2o7Ar21jEXeSsuqpKHwO73NolZq" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -108,8 +108,45 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CdCommand.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in CLI.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CatCommandTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CdCommandTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ExitCommandTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HelpCommandTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ListCommandTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MkdirCommandTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MkdirCommandTest.testExecuteCreatesDirectory.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MoveCommandTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PwdCommandTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RemoveCommandTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RemoveDirectoryCommandTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TouchCommandTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.java in CLI.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Yassin&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/old data/AI/level 3/operating systems/OS-Assignment-1/src/main/java/org/os/commands&quot;,
+    &quot;last_opened_file_path&quot;: &quot;Y:/FCAI/Level 3/Operating System/Assignments/OS-Assignment-1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;E:/Semester 5/Operating Systems/Assignments/Assignment 1/CLI/src/main/java/org/os/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Semester 5\Operating Systems\Assignments\Assignment 1\CLI\src\main\java\org\os" />
@@ -125,6 +162,7 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.CdCommandTest">
+  <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.os.Main" />
       <module name="CLI" />
@@ -148,12 +186,18 @@
       </method>
     </configuration>
     <configuration name="ListCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ListCommandTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="MkdirCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MkdirCommandTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -164,6 +208,10 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MoveCommandTest" />
       <option name="TEST_OBJECT" value="class" />
+    <configuration name="java in CLI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLI" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -191,8 +239,8 @@
       <workItem from="1730213226002" duration="105000" />
       <workItem from="1730213532548" duration="16000" />
       <workItem from="1730227128069" duration="82000" />
-      <workItem from="1730228140546" duration="7593000" />
-      <workItem from="1730294932179" duration="4890000" />
+      <workItem from="1730228140546" duration="305000" />
+      <workItem from="1730314743511" duration="353000" />
     </task>
     <task id="LOCAL-00001" summary="exit, pwd, help Test are done">
       <option name="closed" value="true" />
