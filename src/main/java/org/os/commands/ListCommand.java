@@ -1,6 +1,8 @@
 package org.os.commands;
 
 
+import org.os.Main;
+
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
@@ -22,10 +24,11 @@ public class ListCommand implements Command {
         }
 
         String directoryPath = getDirectoryPath(args);
-        Path dir = Paths.get(directoryPath);
+        Path dir = Paths.get(Main.currentDirectory);
 
         if (!Files.exists(dir) || !Files.isDirectory(dir)) {
-            System.out.println("Invalid directory: " + directoryPath);
+             System.out.println("Invalid directory: " + directoryPath);
+            //System.out.println("Invalid directory: ");
             return;
         }
 

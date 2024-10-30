@@ -1,5 +1,7 @@
 package org.os.commands;
 
+import org.os.Main;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -14,7 +16,7 @@ public class TouchCommand implements Command {
         }
 
         String fileName = args[0];
-        Path filePath = Paths.get(System.getProperty("user.dir"), fileName);
+        Path filePath = Paths.get(Main.currentDirectory, fileName);
 
         try {
             // Create the parent directories if they do not exist

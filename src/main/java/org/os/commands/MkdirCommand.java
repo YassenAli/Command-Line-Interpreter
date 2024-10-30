@@ -1,5 +1,7 @@
 package org.os.commands;
 
+import org.os.Main;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -14,7 +16,7 @@ public class MkdirCommand implements Command {
         }
 
         String directoryName = args[0];
-        Path path = Paths.get(directoryName);
+        Path path = Paths.get(Main.currentDirectory);
 
         // Check if the parent directory exists
         if (path.getParent() != null && !Files.exists(path.getParent())) {
