@@ -1,7 +1,6 @@
 package org.os.commands;
 
 import org.os.Main;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -11,31 +10,33 @@ public class MkdirCommand implements Command {
     @Override
     public void execute(String[] args) {
         if (args.length < 1) {
-            System.out.println("Usage: mkdir <directory-name>");
+            System.out.println("Usage: mkdir <directory-name(s)>");
             return;
         }
 
-        String directoryName = args[0];
-        Path path = Paths.get(Main.currentDirectory);
-        Path newDirectoryPath = path.resolve(directoryName);
+        Path currentPath = Paths.get(Main.currentDirectory);
 
-        // Check if the parent directory exists
-        if (newDirectoryPath.getParent() != null && !Files.exists(newDirectoryPath.getParent())) {
-            System.out.println("Parent directory does not exist: " + path.getParent());
-            return;
-        }
+        for (String directoryName : args) {
+            Path newDirectoryPath = currentPath.resolve(directoryName);
 
-        // Check if a file with the same name exists
-        if (Files.exists(newDirectoryPath) && !Files.isDirectory(newDirectoryPath)) {
-            System.out.println("A file with the same name exists: " + newDirectoryPath.getFileName());
-            return;
-        }
+            // Check if the parent directory exists
+            if (newDirectoryPath.getParent() != null && !Files.exists(newDirectoryPath.getParent())) {
+                System.out.println("Parent directory does not exist: " + newDirectoryPath.getParent());
+                continue;
+            }
 
-        try {
-            Files.createDirectory(newDirectoryPath);
-            System.out.println("Directory created: " + path.toString());
-        } catch (IOException e) {
-            System.out.println("Error creating directory: " + e.getMessage());
+            // Check if a file with the same name exists
+            if (Files.exists(newDirectoryPath) && !Files.isDirectory(newDirectoryPath)) {
+                System.out.println("A file with the same name exists: " + newDirectoryPath.getFileName());
+                continue;
+            }
+
+            try {
+                Files.createDirectory(newDirectoryPath);
+                System.out.println("Directory created: " + newDirectoryPath);
+            } catch (IOException e) {
+                System.out.println("Error creating directory: " + e.getMessage());
+            }
         }
     }
 }
