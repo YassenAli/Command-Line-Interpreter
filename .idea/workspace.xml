@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="528441ef-bc7b-4310-8a47-9af4a45d9eec" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/os/commands/AppendCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/AppendCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/os/commands/PipeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/PipeCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/os/commands/RedirectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/RedirectCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PipeCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PipeCommandTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +52,7 @@
     "JUnit.MkdirCommandTest.testExecuteCreatesDirectory.executor": "Run",
     "JUnit.MoveCommandTest.TestMoveFile.executor": "Run",
     "JUnit.MoveCommandTest.executor": "Run",
+    "JUnit.PipeCommandTest.executor": "Run",
     "JUnit.RedirectCommandTest.executor": "Run",
     "JUnit.RedirectCommandTest.testRedirectCommand.executor": "Run",
     "JUnit.RedirectCommandTest.testRedirectCommand_InvalidFile.executor": "Run",
@@ -96,21 +101,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RedirectCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PipeCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RedirectCommandTest" />
+      <option name="MAIN_CLASS_NAME" value="PipeCommandTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RedirectCommandTest.testRedirectCommand_InvalidFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RedirectCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="RedirectCommandTest" />
-      <option name="METHOD_NAME" value="testRedirectCommand_InvalidFile" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -127,11 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PipeCommandTest" />
         <item itemvalue="JUnit.AppendCommandTest" />
+        <item itemvalue="JUnit.RedirectCommandTest.testRedirectCommand_Overwrite" />
         <item itemvalue="JUnit.AppendCommandTest.testAppendCommandInvalidFile" />
         <item itemvalue="JUnit.RedirectCommandTest" />
-        <item itemvalue="JUnit.RedirectCommandTest.testRedirectCommand_InvalidFile" />
-        <item itemvalue="JUnit.RedirectCommandTest.testRedirectCommand_Overwrite" />
       </list>
     </recent_temporary>
   </component>
@@ -148,7 +152,8 @@
       <workItem from="1730213226002" duration="105000" />
       <workItem from="1730213532548" duration="16000" />
       <workItem from="1730227128069" duration="82000" />
-      <workItem from="1730228140546" duration="6650000" />
+      <workItem from="1730228140546" duration="7593000" />
+      <workItem from="1730294932179" duration="4890000" />
     </task>
     <servers />
   </component>
