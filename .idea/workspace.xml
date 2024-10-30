@@ -6,16 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="528441ef-bc7b-4310-8a47-9af4a45d9eec" name="Changes" comment="exit, pwd, help Test are done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/os/commands/ListCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/ListCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/os/commands/MkdirCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/MkdirCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ListCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ListCommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MkdirCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MkdirCommandTest.java" afterDir="false" />
-    <list default="true" id="528441ef-bc7b-4310-8a47-9af4a45d9eec" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/os/commands/AppendCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/AppendCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/os/commands/PipeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/PipeCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/os/commands/RedirectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/RedirectCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PipeCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PipeCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hello" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/existingFile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nonexistent.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/os/commands/MoveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/MoveCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MoveCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MoveCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testDir/file1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testDir/file2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testDir/file3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tt.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,14 +70,21 @@
     "JUnit.AppendCommandTest.testAppendCommand.executor": "Run",
     "JUnit.AppendCommandTest.testAppendCommandInvalidFile.executor": "Run",
     "JUnit.CatCommandTest.executor": "Run",
+    "JUnit.CatCommandTest.testCatCommand.executor": "Run",
     "JUnit.CdCommandTest.executor": "Run",
     "JUnit.ExitCommandTest.executor": "Run",
     "JUnit.HelpCommandTest.executor": "Run",
     "JUnit.ListCommandTest.executor": "Run",
     "JUnit.MkdirCommandTest.executor": "Run",
     "JUnit.MkdirCommandTest.testExecuteCreatesDirectory.executor": "Run",
+    "JUnit.MoveCommandTest.TestMoveFile.executor": "Run",
     "JUnit.MoveCommandTest.executor": "Run",
+    "JUnit.PipeCommandTest.executor": "Run",
     "JUnit.PwdCommandTest.executor": "Run",
+    "JUnit.RedirectCommandTest.executor": "Run",
+    "JUnit.RedirectCommandTest.testRedirectCommand.executor": "Run",
+    "JUnit.RedirectCommandTest.testRedirectCommand_InvalidFile.executor": "Run",
+    "JUnit.RedirectCommandTest.testRedirectCommand_Overwrite.executor": "Run",
     "JUnit.RemoveCommandTest.executor": "Run",
     "JUnit.RemoveDirectoryCommandTest.executor": "Run",
     "JUnit.TouchCommandTest.executor": "Run",
@@ -85,22 +93,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "Zeyad",
-    "JUnit.CatCommandTest.testCatCommand.executor": "Run",
-    "JUnit.ListCommandTest.executor": "Run",
-    "JUnit.MkdirCommandTest.executor": "Run",
-    "JUnit.MkdirCommandTest.testExecuteCreatesDirectory.executor": "Run",
-    "JUnit.MoveCommandTest.TestMoveFile.executor": "Run",
-    "JUnit.MoveCommandTest.executor": "Run",
-    "JUnit.PipeCommandTest.executor": "Run",
-    "JUnit.RedirectCommandTest.executor": "Run",
-    "JUnit.RedirectCommandTest.testRedirectCommand.executor": "Run",
-    "JUnit.RedirectCommandTest.testRedirectCommand_InvalidFile.executor": "Run",
-    "JUnit.RedirectCommandTest.testRedirectCommand_Overwrite.executor": "Run",
-    "JUnit.java in CLI.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Yassin",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/old data/AI/level 3/operating systems/OS-Assignment-1/src/main/java/org/os/commands",
@@ -131,7 +124,7 @@
       <recent name="org.os.commands" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MkdirCommandTest">
+  <component name="RunManager" selected="JUnit.CdCommandTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.os.Main" />
       <module name="CLI" />
@@ -150,75 +143,38 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CdCommandTest" />
       <option name="TEST_OBJECT" value="class" />
-  <component name="RunManager">
-    <configuration name="AppendCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CLI" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AppendCommandTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppendCommandTest.testAppendCommandInvalidFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CLI" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AppendCommandTest" />
-      <option name="METHOD_NAME" value="testAppendCommandInvalidFile" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="ListCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CLI" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ListCommandTest" />
-    <configuration name="PipeCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CLI" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PipeCommandTest" />
       <option name="TEST_OBJECT" value="class" />
-      <dir value="$PROJECT_DIR$/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="MkdirCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CLI" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MkdirCommandTest" />
-    <configuration name="RedirectCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CLI" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RedirectCommandTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RedirectCommandTest.testRedirectCommand_Overwrite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MoveCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RedirectCommandTest" />
-      <option name="METHOD_NAME" value="testRedirectCommand_Overwrite" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="MoveCommandTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CdCommandTest" />
+        <item itemvalue="JUnit.MoveCommandTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.MkdirCommandTest" />
         <item itemvalue="JUnit.ListCommandTest" />
-        <item itemvalue="JUnit.java in CLI" />
-        <item itemvalue="JUnit.CdCommandTest" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.PipeCommandTest" />
-        <item itemvalue="JUnit.AppendCommandTest" />
-        <item itemvalue="JUnit.RedirectCommandTest.testRedirectCommand_Overwrite" />
-        <item itemvalue="JUnit.AppendCommandTest.testAppendCommandInvalidFile" />
-        <item itemvalue="JUnit.RedirectCommandTest" />
       </list>
     </recent_temporary>
   </component>
