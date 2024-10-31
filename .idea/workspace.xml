@@ -63,7 +63,12 @@
     "JUnit.CdCommandTest.executor": "Run",
     "JUnit.ExitCommandTest.executor": "Run",
     "JUnit.HelpCommandTest.executor": "Run",
+    "JUnit.ListCommandTest (1).executor": "Run",
     "JUnit.ListCommandTest.executor": "Run",
+    "JUnit.ListCommandTest.testInvalidDirectory.executor": "Run",
+    "JUnit.ListCommandTest.testListFilesInvalidDirectory.executor": "Run",
+    "JUnit.ListCommandTest.testListWithAllAndReverseFlags.executor": "Run",
+    "JUnit.MkdirCommandTest (1).executor": "Run",
     "JUnit.MkdirCommandTest.executor": "Run",
     "JUnit.MkdirCommandTest.testExecuteCreatesDirectory.executor": "Run",
     "JUnit.MoveCommandTest.TestMoveFile.executor": "Run",
@@ -82,7 +87,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+<<<<<<< HEAD
     "git-widget-placeholder": "Yassin",
+=======
+    "git-widget-placeholder": "Zeyad",
+>>>>>>> 0b4c0bb31e10fc4562b43f449042198595f8ea57
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/old data/AI/level 3/operating systems/OS-Assignment-1/src/main/java/org/os/commands",
@@ -136,23 +145,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ListCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MkdirCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MoveCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PipeCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MoveCommandTest" />
+      <option name="MAIN_CLASS_NAME" value="PipeCommandTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TouchCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TouchCommandTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java in CLI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLI" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -160,12 +174,20 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.TouchCommandTest" />
+        <item itemvalue="JUnit.PipeCommandTest" />
+        <item itemvalue="JUnit.java in CLI" />
         <item itemvalue="JUnit.CdCommandTest" />
-        <item itemvalue="JUnit.MoveCommandTest" />
-        <item itemvalue="JUnit.MkdirCommandTest" />
-        <item itemvalue="JUnit.ListCommandTest" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -182,6 +204,9 @@
       <workItem from="1730227128069" duration="82000" />
       <workItem from="1730228140546" duration="7593000" />
       <workItem from="1730294932179" duration="4890000" />
+      <workItem from="1730320475112" duration="772000" />
+      <workItem from="1730377525443" duration="2802000" />
+      <workItem from="1730382899398" duration="3715000" />
     </task>
     <task id="LOCAL-00001" summary="exit, pwd, help Test are done">
       <option name="closed" value="true" />
@@ -220,5 +245,8 @@
     <MESSAGE value="exit, pwd, help Test are done" />
     <MESSAGE value="fixed some issues in Move Command" />
     <option name="LAST_COMMIT_MESSAGE" value="fixed some issues in Move Command" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/OS_Assignment_1$java_in_CLI.ic" NAME="java in CLI Coverage Results" MODIFIED="1730383946240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>

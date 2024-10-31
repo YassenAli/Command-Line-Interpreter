@@ -7,7 +7,7 @@ public class HelpCommand implements Command {
         System.out.println("cd: change directory");
         System.out.println("ls: view content of directory");
         System.out.println("ls -a: List all files, including hidden");
-        System.out.println("ls -r: List files recursively");
+        System.out.println("ls -r: List files reversely");
         System.out.println("mkdir: Create a directory");
         System.out.println("rmdir: Remove a directory");
         System.out.println("touch: Create an empty file");
