@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="528441ef-bc7b-4310-8a47-9af4a45d9eec" name="Changes" comment="fixed some issues in Move Command">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="528441ef-bc7b-4310-8a47-9af4a45d9eec" name="Changes" comment="fixed some issues in Move Command" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -182,7 +180,7 @@
       <workItem from="1730227128069" duration="82000" />
       <workItem from="1730228140546" duration="7593000" />
       <workItem from="1730294932179" duration="4890000" />
-      <workItem from="1730367413774" duration="1665000" />
+      <workItem from="1730367413774" duration="1916000" />
     </task>
     <task id="LOCAL-00001" summary="exit, pwd, help Test are done">
       <option name="closed" value="true" />
