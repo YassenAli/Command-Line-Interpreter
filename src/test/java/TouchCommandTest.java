@@ -1,9 +1,14 @@
-import org.junit.jupiter.api.*;
-import org.os.commands.TouchCommand;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.IOException;
-import java.nio.file.*;
-import static org.junit.jupiter.api.Assertions.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.os.Main;
+import org.os.commands.TouchCommand;
 
 class TouchCommandTest {
 
@@ -13,24 +18,31 @@ class TouchCommandTest {
     void setUp() throws IOException {
         // Set up a temporary directory for testing
         tempDir = Files.createTempDirectory("touchCommandTest");
-        System.setProperty("user.dir", tempDir.toString());
+        // Set the current directory in the Main class to the temporary directory
+        Main.currentDirectory = tempDir.toString(); // Ensure TouchCommand uses the temp directory
     }
 
     @AfterEach
     void tearDown() throws IOException {
         // Clean up the temp directory after each test
         Files.walk(tempDir)
-                .map(Path::toFile)
-                .forEach(file -> file.delete());
+                .sorted((path1, path2) -> path2.compareTo(path1)) // Sort to delete files before directories
+                .forEach(path -> {
+                    try {
+                        Files.delete(path);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                });
     }
 
     @Test
     void testCreateNewFile() {
         String fileName = "newFile.txt";
-        Path filePath = tempDir.resolve(fileName); //get the path of the temporary path
+        Path filePath = tempDir.resolve(fileName); // Get the path of the temporary path
 
-        TouchCommand touchCommand = new TouchCommand(); // call the command touch
-        touchCommand.execute(new String[]{fileName});  //the file name that we want to create
+        TouchCommand touchCommand = new TouchCommand(); // Call the command touch
+        touchCommand.execute(new String[] { fileName }); // The file name that we want to create
 
         assertTrue(Files.exists(filePath), "File should be created");
         assertTrue(Files.isRegularFile(filePath), "The created file should be a regular file");
@@ -44,9 +56,9 @@ class TouchCommandTest {
         Path filePath = Files.createFile(tempDir.resolve(fileName));
 
         TouchCommand touchCommand = new TouchCommand();
-        touchCommand.execute(new String[]{fileName});
+        touchCommand.execute(new String[] { fileName });
 
-        assertTrue(Files.exists(filePath), "File should still exist");
+        assertTrue(Files.exists(filePath), "File should still exist after touch command is called");
     }
 
     @Test
@@ -54,7 +66,7 @@ class TouchCommandTest {
         TouchCommand touchCommand = new TouchCommand();
 
         // Capture console output for verification
-        String[] args = new String[]{}; //no input has been entered (invalid input)
+        String[] args = new String[] {}; // No input has been entered (invalid input)
         touchCommand.execute(args);
     }
 
@@ -64,7 +76,7 @@ class TouchCommandTest {
         Path filePath = tempDir.resolve(filePathString);
 
         TouchCommand touchCommand = new TouchCommand();
-        touchCommand.execute(new String[]{filePathString});
+        touchCommand.execute(new String[] { filePathString });
 
         assertTrue(Files.exists(filePath), "File should be created in the nested directory");
         assertTrue(Files.isRegularFile(filePath), "The created file should be a regular file");

@@ -87,7 +87,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+<<<<<<< HEAD
+    "git-widget-placeholder": "Yassin",
+=======
     "git-widget-placeholder": "Zeyad",
+>>>>>>> 0b4c0bb31e10fc4562b43f449042198595f8ea57
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/old data/AI/level 3/operating systems/OS-Assignment-1/src/main/java/org/os/commands",
