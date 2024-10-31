@@ -6,16 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="528441ef-bc7b-4310-8a47-9af4a45d9eec" name="Changes" comment="fixed some issues in Move Command">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hello" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/existingFile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nonexistent.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testDir/file1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testDir/file2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testDir/file3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_output.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tt.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +82,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Yassin",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/old data/AI/level 3/operating systems/OS-Assignment-1/src/main/java/org/os/commands",
