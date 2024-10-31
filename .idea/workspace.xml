@@ -6,16 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="528441ef-bc7b-4310-8a47-9af4a45d9eec" name="Changes" comment="fixed some issues in Move Command">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hello" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/existingFile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nonexistent.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testDir/file1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testDir/file2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testDir/file3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_output.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tt.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,55 +50,55 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.CdCommand.executor": "Run",
-    "Application.Main.executor": "Run",
-    "JUnit.All in CLI.executor": "Run",
-    "JUnit.AppendCommandTest.executor": "Run",
-    "JUnit.AppendCommandTest.testAppendCommand.executor": "Run",
-    "JUnit.AppendCommandTest.testAppendCommandInvalidFile.executor": "Run",
-    "JUnit.CatCommandTest.executor": "Run",
-    "JUnit.CatCommandTest.testCatCommand.executor": "Run",
-    "JUnit.CdCommandTest.executor": "Run",
-    "JUnit.ExitCommandTest.executor": "Run",
-    "JUnit.HelpCommandTest.executor": "Run",
-    "JUnit.ListCommandTest.executor": "Run",
-    "JUnit.MkdirCommandTest.executor": "Run",
-    "JUnit.MkdirCommandTest.testExecuteCreatesDirectory.executor": "Run",
-    "JUnit.MoveCommandTest.TestMoveFile.executor": "Run",
-    "JUnit.MoveCommandTest.executor": "Run",
-    "JUnit.PipeCommandTest.executor": "Run",
-    "JUnit.PwdCommandTest.executor": "Run",
-    "JUnit.RedirectCommandTest.executor": "Run",
-    "JUnit.RedirectCommandTest.testRedirectCommand.executor": "Run",
-    "JUnit.RedirectCommandTest.testRedirectCommand_InvalidFile.executor": "Run",
-    "JUnit.RedirectCommandTest.testRedirectCommand_Overwrite.executor": "Run",
-    "JUnit.RemoveCommandTest.executor": "Run",
-    "JUnit.RemoveDirectoryCommandTest.executor": "Run",
-    "JUnit.TouchCommandTest.executor": "Run",
-    "JUnit.java in CLI.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/old data/AI/level 3/operating systems/OS-Assignment-1/src/main/java/org/os/commands",
-    "last_opened_file_path": "Y:/FCAI/Level 3/Operating System/Assignments/OS-Assignment-1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "E:/Semester 5/Operating Systems/Assignments/Assignment 1/CLI/src/main/java/org/os/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CdCommand.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in CLI.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AppendCommandTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AppendCommandTest.testAppendCommand.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AppendCommandTest.testAppendCommandInvalidFile.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CatCommandTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CatCommandTest.testCatCommand.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CdCommandTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ExitCommandTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HelpCommandTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ListCommandTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MkdirCommandTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MkdirCommandTest.testExecuteCreatesDirectory.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MoveCommandTest.TestMoveFile.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MoveCommandTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PipeCommandTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PwdCommandTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RedirectCommandTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RedirectCommandTest.testRedirectCommand.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RedirectCommandTest.testRedirectCommand_InvalidFile.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RedirectCommandTest.testRedirectCommand_Overwrite.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RemoveCommandTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RemoveDirectoryCommandTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TouchCommandTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.java in CLI.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Yassin&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/old data/AI/level 3/operating systems/OS-Assignment-1/src/main/java/org/os/commands&quot;,
+    &quot;last_opened_file_path&quot;: &quot;Y:/FCAI/Level 3/Operating System/Assignments/OS-Assignment-1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;E:/Semester 5/Operating Systems/Assignments/Assignment 1/CLI/src/main/java/org/os/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Semester 5\Operating Systems\Assignments\Assignment 1\CLI\src\main\java\org\os" />
@@ -192,6 +182,7 @@
       <workItem from="1730227128069" duration="82000" />
       <workItem from="1730228140546" duration="7593000" />
       <workItem from="1730294932179" duration="4890000" />
+      <workItem from="1730367413774" duration="1665000" />
     </task>
     <task id="LOCAL-00001" summary="exit, pwd, help Test are done">
       <option name="closed" value="true" />
