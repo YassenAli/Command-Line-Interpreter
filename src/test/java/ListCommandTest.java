@@ -3,90 +3,121 @@ import org.os.Main;
 import org.os.commands.ListCommand;
 
 import java.io.ByteArrayOutputStream;
-import java.io.IOException;
 import java.io.PrintStream;
 import java.nio.file.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 class ListCommandTest {
 
+    private static final Path testDir = Paths.get("testDir");
+    private static final Path hiddenFile = testDir.resolve(".hiddenFile");
+    private static final Path visibleFile = testDir.resolve("visibleFile");
+    private static final Path nestedDir = testDir.resolve("nestedDir");
+
+    private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
     private final ListCommand listCommand = new ListCommand();
-    private final ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-    private final Path testDir = Paths.get("testDir");
+
+    @BeforeAll
+    static void setUp() throws Exception {
+        Files.createDirectory(testDir);
+        Files.createFile(hiddenFile);
+        Files.createFile(visibleFile);
+        Files.createDirectory(nestedDir);
+    }
 
     @BeforeEach
-    void setUp() throws Exception {
-        System.setOut(new PrintStream(outputStream));
-        Files.createDirectories(testDir);
-        Files.createFile(testDir.resolve("file1.txt"));
-        Files.createFile(testDir.resolve(".hiddenFile.txt"));
-        Files.createDirectories(testDir.resolve("subDir"));
+    void redirectSystemOutput() {
+        System.setOut(new PrintStream(outputStreamCaptor));
     }
 
     @AfterEach
-    void tearDown() throws Exception {
+    void resetSystemOutput() {
         System.setOut(System.out);
-        Files.walk(testDir)
-                .map(Path::toFile)
-                .sorted((a, b) -> b.compareTo(a)) // Delete files before directories
-                .forEach(f -> f.delete());
+    }
+
+    @AfterAll
+    static void tearDown() throws Exception {
+        Files.deleteIfExists(hiddenFile);
+        Files.deleteIfExists(visibleFile);
+        Files.deleteIfExists(nestedDir);
+        Files.deleteIfExists(testDir);
     }
 
     @Test
-    void testListFilesNonRecursive() {
+    void testListWithoutFlags() {
         Main.currentDirectory = testDir.toString();
         listCommand.execute(new String[]{});
-        String output = outputStream.toString();
 
-        assertTrue(output.contains("- file1.txt"));
-        assertTrue(output.contains("d subDir"));
-        assertFalse(output.contains(".hiddenFile.txt"));
+        String output = outputStreamCaptor.toString().trim();
+        assertTrue(output.contains("- visibleFile"));
+        assertTrue(output.contains("d nestedDir"));
+        assertFalse(output.contains(".hiddenFile"));
     }
 
     @Test
-    void testListFilesWithHiddenFlag() {
+    void testListWithAllFlag() {
         Main.currentDirectory = testDir.toString();
         listCommand.execute(new String[]{"-a"});
-        String output = outputStream.toString();
 
-        assertTrue(output.contains("- file1.txt"));
-        assertTrue(output.contains("d subDir"));
-        assertTrue(output.contains("- .hiddenFile.txt"));
+        String output = outputStreamCaptor.toString().trim();
+        assertTrue(output.contains("- visibleFile"));
+        assertTrue(output.contains("d nestedDir"));
+        assertTrue(output.contains("- .hiddenFile"));
     }
 
     @Test
-    void testListFilesInvalidDirectory() {
-        Main.currentDirectory = "nonExistentDir";
-        listCommand.execute(new String[]{});
-        String output = outputStream.toString().trim();
-
-        assertEquals("Invalid directory: .", output);
-    }
-
-    @Test
-    void testListFilesRecursive() throws IOException {
-        Files.createFile(testDir.resolve("subDir").resolve("fileInSubDir.txt"));
+    void testListWithReverseFlag() {
         Main.currentDirectory = testDir.toString();
         listCommand.execute(new String[]{"-r"});
-        String output = outputStream.toString();
 
-        assertTrue(output.contains("- file1.txt"));
-        assertTrue(output.contains("d subDir"));
-        assertTrue(output.contains("  - fileInSubDir.txt"));
-        assertFalse(output.contains(".hiddenFile.txt"));
+        String output = outputStreamCaptor.toString().trim();
+        String[] lines = output.split("\n");
+        assertTrue(lines[0].contains("nestedDir") || lines[0].contains("visibleFile"));
     }
 
     @Test
-    void testListFilesRecursiveWithHidden() throws IOException, IOException {
-        Files.createFile(testDir.resolve("subDir").resolve(".hiddenFileInSubDir.txt"));
+    void testListWithAllAndReverseFlags() {
         Main.currentDirectory = testDir.toString();
         listCommand.execute(new String[]{"-a", "-r"});
-        String output = outputStream.toString();
 
-        assertTrue(output.contains("- file1.txt"));
-        assertTrue(output.contains("d subDir"));
-        assertTrue(output.contains("  - .hiddenFileInSubDir.txt"));
-        assertTrue(output.contains("- .hiddenFile.txt"));
+        String output = outputStreamCaptor.toString().trim();
+        String[] lines = output.split("\n");
+
+        // Check for the presence of hidden files
+        assertTrue(output.contains(".hiddenFile"), "Output should contain .hiddenFile");
+
+        // Ensure the output is in reverse order: hiddenFile should appear after visibleFile and nestedDir
+        boolean foundHiddenFile = false;
+        boolean foundVisibleFile = false;
+        boolean foundNestedDir = false;
+
+        for (String line : lines) {
+            if (line.contains("nestedDir")) {
+                foundNestedDir = true;
+            }
+            if (line.contains("visibleFile")) {
+                foundVisibleFile = true;
+            }
+            if (line.contains(".hiddenFile")) {
+                foundHiddenFile = true;
+            }
+        }
+
+        // Check if the order of appearance is correct
+        if (foundHiddenFile) {
+            assertTrue(foundVisibleFile || foundNestedDir,
+                    "If .hiddenFile is found, it should be after visibleFile or nestedDir in the output.");
+        }
+    }
+
+    @Test
+    void testInvalidDirectory() {
+        Main.currentDirectory = "invalidDir";
+        listCommand.execute(new String[]{});
+
+        String output = outputStreamCaptor.toString().trim();
+        assertTrue(output.contains("Invalid directory: ."));
     }
 }

@@ -32,7 +32,7 @@ class HelpCommandTest {
                 "cd: change directory",
                 "ls: view content of directory",
                 "ls -a: List all files, including hidden",
-                "ls -r: List files recursively",
+                "ls -r: List files reversely",
                 "mkdir: Create a directory",
                 "rmdir: Remove a directory",
                 "touch: Create an empty file",
