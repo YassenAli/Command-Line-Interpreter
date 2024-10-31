@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="528441ef-bc7b-4310-8a47-9af4a45d9eec" name="Changes" comment="fixed some issues in Move Command">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/os/commands/PipeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/os/commands/PipeCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PipeCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PipeCommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testDir/file1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testDir/file2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testDir/file3.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +202,7 @@
       <workItem from="1730294932179" duration="4890000" />
       <workItem from="1730320475112" duration="772000" />
       <workItem from="1730377525443" duration="2802000" />
-      <workItem from="1730382899398" duration="3350000" />
+      <workItem from="1730382899398" duration="3715000" />
     </task>
     <task id="LOCAL-00001" summary="exit, pwd, help Test are done">
       <option name="closed" value="true" />
