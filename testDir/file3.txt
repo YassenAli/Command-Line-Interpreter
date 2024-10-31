@@ -1,5 +1,0 @@
-file3
-file3
-x.txt
-x.txt
-dir1

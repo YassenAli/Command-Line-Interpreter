@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.os.Main;
@@ -34,6 +35,24 @@ public class PipeCommandTest {
             Main.currentDirectory = "testDir";
         } catch (IOException e) {
             System.err.println("Failed to set up test files: " + e.getMessage());
+        }
+    }
+
+    @AfterEach
+    public void tearDown() {
+        deleteTestFiles();
+    }
+
+    private void deleteTestFiles() {
+        File dir = new File("testDir");
+        if (dir.exists()) {
+            File[] files = dir.listFiles();
+            if (files != null) {
+                for (File file : files) {
+                    file.delete(); // Delete each file
+                }
+            }
+            dir.delete(); // Delete the directory itself
         }
     }
 
